@@ -26,7 +26,7 @@ public class IdentityCheckOpsController {
         
         // Check employee availability in database
         if (service.wasEmployee(serviceNumber)) {
-            return new ResponseEntity<>("Employee found with id no "+serviceNumber, HttpStatus.OK);
+            return new ResponseEntity<>(serviceNumber, HttpStatus.OK);
         } else {
             return new ResponseEntity<>("Employee not found", HttpStatus.NOT_FOUND);
         }
